@@ -1,5 +1,5 @@
 # Estágio 1: Build do projeto com Maven
-FROM maven:3.8.6-openjdk-17 AS build
+FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 
 # Copia apenas o pom.xml primeiro (para aproveitar o cache de dependências)
