@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user") // Rota base
-public class userController {
+public class UserController {
 
     // Endpoint GET para retornar todos os usuários
     @GetMapping
