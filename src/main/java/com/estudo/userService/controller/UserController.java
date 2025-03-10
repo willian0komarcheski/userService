@@ -1,4 +1,4 @@
-package com.estudo.userService.controller;
+package com.example.libs.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,25 +7,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.libs.service.UserService;
+
 
 
 @RestController
-@RequestMapping("/user") // Rota base
+@RequestMapping("/user")
 public class UserController {
 
-    // Endpoint GET para retornar todos os usuários
+    private UserService userService = new UserService();
+
+
     @GetMapping
-    public String getAll() {
+    public String index() {
         return "Lista de cu!";
     }
 
-    // Endpoint GET com parâmetro na rota
     @GetMapping("/{id}")
     public String getUserById(@PathVariable Long id) {
-        return "Usuário com ID: " + id;
+        String result = userService.returnName(id);
+        return String.format("usuario $s tem o id $d", result, id);
     }
 
-    // Endpoint POST para criar um novo usuário
     @PostMapping
     public String createUser(@RequestBody String nome) {
         return "Usuário " + nome + " criado!";

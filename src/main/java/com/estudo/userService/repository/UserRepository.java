@@ -1,7 +1,11 @@
-package com.estudo.userService.repository;
+package com.example.libs.repository;
 
-import com.estudo.userService.model.User;
+import com.example.libs.model.UserModel;
 
-public class UserRepository<User> {
+public class UserRepository extends AbstractRepository<UserModel> {
+
+    public UserRepository() {
+        super();
+    }
     
 }
