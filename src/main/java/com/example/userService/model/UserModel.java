@@ -1,4 +1,4 @@
-package com.example.libs.model;
+package com.example.userService.model;
 
 import com.example.libs.annotations.entity.ColumnName;
 import com.example.libs.annotations.entity.TableName;
