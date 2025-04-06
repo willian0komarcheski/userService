@@ -3,4 +3,4 @@
 	url = https://github.com/willian0komarcheski/libs.git
 [submodule "src/main/java/com/example/libs"]
 	path = src/main/java/com/example/libs
-	url = https://github.com/willian0komarcheski/libs.git
+	url = http://github.com/willian0komarcheski/libs.git
